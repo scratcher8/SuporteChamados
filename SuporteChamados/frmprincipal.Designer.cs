@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.brnCriarChamado = new System.Windows.Forms.Button();
+            this.btndaboard = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
@@ -46,32 +50,28 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
-            this.panel9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.panel9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -79,12 +79,57 @@
             this.panel1.BackColor = System.Drawing.Color.Teal;
             this.panel1.Controls.Add(this.pictureBox5);
             this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.brnCriarChamado);
+            this.panel1.Controls.Add(this.btndaboard);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(372, 761);
             this.panel1.TabIndex = 0;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::SuporteChamados.Properties.Resources.Design_sem_nome;
+            this.pictureBox5.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(345, 110);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 8;
+            this.pictureBox5.TabStop = false;
+            // 
+            // button3
+            // 
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.Black;
+            this.button3.Location = new System.Drawing.Point(13, 235);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(344, 43);
+            this.button3.TabIndex = 6;
+            this.button3.Text = "Listagem de chamados";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // brnCriarChamado
+            // 
+            this.brnCriarChamado.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.brnCriarChamado.ForeColor = System.Drawing.Color.Black;
+            this.brnCriarChamado.Location = new System.Drawing.Point(13, 186);
+            this.brnCriarChamado.Name = "brnCriarChamado";
+            this.brnCriarChamado.Size = new System.Drawing.Size(344, 43);
+            this.brnCriarChamado.TabIndex = 5;
+            this.brnCriarChamado.Text = "Criar chamado";
+            this.brnCriarChamado.UseVisualStyleBackColor = true;
+            this.brnCriarChamado.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // btndaboard
+            // 
+            this.btndaboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btndaboard.ForeColor = System.Drawing.Color.Black;
+            this.btndaboard.Location = new System.Drawing.Point(13, 137);
+            this.btndaboard.Name = "btndaboard";
+            this.btndaboard.Size = new System.Drawing.Size(344, 43);
+            this.btndaboard.TabIndex = 4;
+            this.btndaboard.Text = "Dashboard";
+            this.btndaboard.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -271,102 +316,6 @@
             this.panel7.Size = new System.Drawing.Size(969, 239);
             this.panel7.TabIndex = 7;
             // 
-            // panel9
-            // 
-            this.panel9.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.panel9.Controls.Add(this.pictureBox1);
-            this.panel9.Controls.Add(this.label12);
-            this.panel9.Location = new System.Drawing.Point(378, 476);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(969, 273);
-            this.panel9.TabIndex = 9;
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(13, 137);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(344, 43);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Dashboard";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(13, 186);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(344, 43);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Criar chamado";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button3
-            // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Location = new System.Drawing.Point(13, 235);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(344, 43);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "Listagem de chamados";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.Black;
-            this.label12.Location = new System.Drawing.Point(310, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(313, 37);
-            this.label12.TabIndex = 0;
-            this.label12.Text = "Tickets com o tempo";
-            // 
-            // label13
-            // 
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.Black;
-            this.label13.Location = new System.Drawing.Point(4, 10);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(333, 42);
-            this.label13.TabIndex = 1;
-            this.label13.Text = "Tickets por prioridade";
-            // 
-            // label14
-            // 
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.Black;
-            this.label14.Location = new System.Drawing.Point(634, 10);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(329, 40);
-            this.label14.TabIndex = 3;
-            this.label14.Text = "Tickets atendendo a SLA";
-            // 
-            // label15
-            // 
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.Black;
-            this.label15.Location = new System.Drawing.Point(342, 10);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(267, 40);
-            this.label15.TabIndex = 4;
-            this.label15.Text = "Tickets por tipo";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::SuporteChamados.Properties.Resources.Captura_de_tela_2025_04_30_201013;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 40);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(947, 230);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
             // pictureBox4
             // 
             this.pictureBox4.Image = global::SuporteChamados.Properties.Resources.Captura_de_tela_2025_04_30_204933;
@@ -397,15 +346,66 @@
             this.pictureBox2.TabIndex = 5;
             this.pictureBox2.TabStop = false;
             // 
-            // pictureBox5
+            // label14
             // 
-            this.pictureBox5.Image = global::SuporteChamados.Properties.Resources.Design_sem_nome;
-            this.pictureBox5.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(345, 110);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 8;
-            this.pictureBox5.TabStop = false;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.Black;
+            this.label14.Location = new System.Drawing.Point(634, 10);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(329, 40);
+            this.label14.TabIndex = 3;
+            this.label14.Text = "Tickets atendendo a SLA";
+            // 
+            // label15
+            // 
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.Black;
+            this.label15.Location = new System.Drawing.Point(342, 10);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(267, 40);
+            this.label15.TabIndex = 4;
+            this.label15.Text = "Tickets por tipo";
+            // 
+            // label13
+            // 
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.Black;
+            this.label13.Location = new System.Drawing.Point(4, 10);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(333, 42);
+            this.label13.TabIndex = 1;
+            this.label13.Text = "Tickets por prioridade";
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panel9.Controls.Add(this.pictureBox1);
+            this.panel9.Controls.Add(this.label12);
+            this.panel9.Location = new System.Drawing.Point(378, 476);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(969, 273);
+            this.panel9.TabIndex = 9;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::SuporteChamados.Properties.Resources.Captura_de_tela_2025_04_30_201013;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 40);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(947, 230);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.Black;
+            this.label12.Location = new System.Drawing.Point(310, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(313, 37);
+            this.label12.TabIndex = 0;
+            this.label12.Text = "Tickets com o tempo";
             // 
             // frmprincipal
             // 
@@ -428,6 +428,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dashboard";
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -439,13 +440,12 @@
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panel7.ResumeLayout(false);
-            this.panel9.ResumeLayout(false);
-            this.panel9.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -473,8 +473,8 @@
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button brnCriarChamado;
+        private System.Windows.Forms.Button btndaboard;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.PictureBox pictureBox1;
