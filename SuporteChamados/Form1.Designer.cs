@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnAcessar = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lbUsuario = new System.Windows.Forms.Label();
             this.lbLogin = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnAcessar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -58,10 +58,21 @@
             this.panel1.Size = new System.Drawing.Size(563, 385);
             this.panel1.TabIndex = 0;
             // 
+            // btnAcessar
+            // 
+            this.btnAcessar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAcessar.Location = new System.Drawing.Point(179, 287);
+            this.btnAcessar.Name = "btnAcessar";
+            this.btnAcessar.Size = new System.Drawing.Size(200, 37);
+            this.btnAcessar.TabIndex = 7;
+            this.btnAcessar.Text = "Acessar";
+            this.btnAcessar.UseVisualStyleBackColor = true;
+            this.btnAcessar.Click += new System.EventHandler(this.btnAcessar_Click);
+            // 
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(134, 229);
+            this.textBox2.Location = new System.Drawing.Point(134, 217);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(349, 33);
@@ -70,18 +81,38 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(134, 127);
+            this.textBox1.Location = new System.Drawing.Point(134, 113);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(349, 33);
             this.textBox1.TabIndex = 5;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::SuporteChamados.Properties.Resources.Senha4;
+            this.pictureBox2.Location = new System.Drawing.Point(41, 174);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(83, 76);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 4;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::SuporteChamados.Properties.Resources.Usuario1;
+            this.pictureBox1.Location = new System.Drawing.Point(48, 88);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(58, 58);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(130, 204);
+            this.label1.Location = new System.Drawing.Point(130, 192);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(69, 22);
             this.label1.TabIndex = 2;
@@ -92,7 +123,7 @@
             this.lbUsuario.AutoSize = true;
             this.lbUsuario.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbUsuario.ForeColor = System.Drawing.Color.Black;
-            this.lbUsuario.Location = new System.Drawing.Point(130, 102);
+            this.lbUsuario.Location = new System.Drawing.Point(130, 88);
             this.lbUsuario.Name = "lbUsuario";
             this.lbUsuario.Size = new System.Drawing.Size(82, 22);
             this.lbUsuario.TabIndex = 1;
@@ -103,42 +134,11 @@
             this.lbLogin.AutoSize = true;
             this.lbLogin.Font = new System.Drawing.Font("Arial", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbLogin.ForeColor = System.Drawing.Color.Black;
-            this.lbLogin.Location = new System.Drawing.Point(42, 29);
+            this.lbLogin.Location = new System.Drawing.Point(42, 18);
             this.lbLogin.Name = "lbLogin";
             this.lbLogin.Size = new System.Drawing.Size(95, 34);
             this.lbLogin.TabIndex = 0;
             this.lbLogin.Text = "Login";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::SuporteChamados.Properties.Resources.Senha4;
-            this.pictureBox2.Location = new System.Drawing.Point(40, 200);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(83, 76);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 4;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::SuporteChamados.Properties.Resources.Usuario1;
-            this.pictureBox1.Location = new System.Drawing.Point(48, 114);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(58, 58);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
-            // 
-            // btnAcessar
-            // 
-            this.btnAcessar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAcessar.Location = new System.Drawing.Point(177, 303);
-            this.btnAcessar.Name = "btnAcessar";
-            this.btnAcessar.Size = new System.Drawing.Size(200, 37);
-            this.btnAcessar.TabIndex = 7;
-            this.btnAcessar.Text = "Acessar";
-            this.btnAcessar.UseVisualStyleBackColor = true;
-            this.btnAcessar.Click += new System.EventHandler(this.btnAcessar_Click);
             // 
             // frmLogin
             // 
