@@ -29,7 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnListagemChamadas = new System.Windows.Forms.Button();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.btnListagemDeChamados = new System.Windows.Forms.Button();
             this.btnCriarChamado = new System.Windows.Forms.Button();
             this.btnDashboard = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -37,12 +38,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.btnCadastrar = new System.Windows.Forms.Button();
+            this.txtTituloTicket = new System.Windows.Forms.TextBox();
+            this.txtDescricaoTicket = new System.Windows.Forms.TextBox();
+            this.cbPrioridadeTicket = new System.Windows.Forms.ComboBox();
+            this.cbCategoriaTicket = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
@@ -51,7 +51,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.Teal;
             this.panel1.Controls.Add(this.pictureBox5);
-            this.panel1.Controls.Add(this.btnListagemChamadas);
+            this.panel1.Controls.Add(this.btnListagemDeChamados);
             this.panel1.Controls.Add(this.btnCriarChamado);
             this.panel1.Controls.Add(this.btnDashboard);
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -59,15 +59,25 @@
             this.panel1.Size = new System.Drawing.Size(372, 761);
             this.panel1.TabIndex = 1;
             // 
-            // btnListagemChamadas
+            // pictureBox5
             // 
-            this.btnListagemChamadas.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnListagemChamadas.Location = new System.Drawing.Point(13, 235);
-            this.btnListagemChamadas.Name = "btnListagemChamadas";
-            this.btnListagemChamadas.Size = new System.Drawing.Size(344, 43);
-            this.btnListagemChamadas.TabIndex = 6;
-            this.btnListagemChamadas.Text = "Listagem de chamados";
-            this.btnListagemChamadas.UseVisualStyleBackColor = true;
+            this.pictureBox5.Image = global::SuporteChamados.Properties.Resources.Design_sem_nome;
+            this.pictureBox5.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(345, 110);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 9;
+            this.pictureBox5.TabStop = false;
+            // 
+            // btnListagemDeChamados
+            // 
+            this.btnListagemDeChamados.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListagemDeChamados.Location = new System.Drawing.Point(13, 235);
+            this.btnListagemDeChamados.Name = "btnListagemDeChamados";
+            this.btnListagemDeChamados.Size = new System.Drawing.Size(344, 43);
+            this.btnListagemDeChamados.TabIndex = 6;
+            this.btnListagemDeChamados.Text = "Listagem de chamados";
+            this.btnListagemDeChamados.UseVisualStyleBackColor = true;
             // 
             // btnCriarChamado
             // 
@@ -144,60 +154,50 @@
             this.label5.TabIndex = 6;
             this.label5.Text = "Prioridade";
             // 
-            // button5
+            // btnCadastrar
             // 
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(1122, 679);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(250, 70);
-            this.button5.TabIndex = 7;
-            this.button5.Text = "Cadastrar";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrar.Location = new System.Drawing.Point(1122, 679);
+            this.btnCadastrar.Name = "btnCadastrar";
+            this.btnCadastrar.Size = new System.Drawing.Size(250, 70);
+            this.btnCadastrar.TabIndex = 7;
+            this.btnCadastrar.Text = "Cadastrar";
+            this.btnCadastrar.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // txtTituloTicket
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(388, 157);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(667, 44);
-            this.textBox1.TabIndex = 8;
+            this.txtTituloTicket.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTituloTicket.Location = new System.Drawing.Point(388, 157);
+            this.txtTituloTicket.Name = "txtTituloTicket";
+            this.txtTituloTicket.Size = new System.Drawing.Size(667, 44);
+            this.txtTituloTicket.TabIndex = 8;
             // 
-            // textBox2
+            // txtDescricaoTicket
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(388, 263);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(667, 125);
-            this.textBox2.TabIndex = 9;
+            this.txtDescricaoTicket.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescricaoTicket.Location = new System.Drawing.Point(388, 263);
+            this.txtDescricaoTicket.Multiline = true;
+            this.txtDescricaoTicket.Name = "txtDescricaoTicket";
+            this.txtDescricaoTicket.Size = new System.Drawing.Size(667, 125);
+            this.txtDescricaoTicket.TabIndex = 9;
             // 
-            // comboBox1
+            // cbPrioridadeTicket
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(388, 452);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(216, 45);
-            this.comboBox1.TabIndex = 10;
+            this.cbPrioridadeTicket.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbPrioridadeTicket.FormattingEnabled = true;
+            this.cbPrioridadeTicket.Location = new System.Drawing.Point(388, 452);
+            this.cbPrioridadeTicket.Name = "cbPrioridadeTicket";
+            this.cbPrioridadeTicket.Size = new System.Drawing.Size(216, 45);
+            this.cbPrioridadeTicket.TabIndex = 10;
             // 
-            // comboBox2
+            // cbCategoriaTicket
             // 
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(391, 558);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(216, 45);
-            this.comboBox2.TabIndex = 11;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::SuporteChamados.Properties.Resources.Design_sem_nome;
-            this.pictureBox5.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(345, 110);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 9;
-            this.pictureBox5.TabStop = false;
+            this.cbCategoriaTicket.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbCategoriaTicket.FormattingEnabled = true;
+            this.cbCategoriaTicket.Location = new System.Drawing.Point(391, 558);
+            this.cbCategoriaTicket.Name = "cbCategoriaTicket";
+            this.cbCategoriaTicket.Size = new System.Drawing.Size(216, 45);
+            this.cbCategoriaTicket.TabIndex = 11;
             // 
             // frmCriarChamado
             // 
@@ -205,11 +205,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1384, 761);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.cbCategoriaTicket);
+            this.Controls.Add(this.cbPrioridadeTicket);
+            this.Controls.Add(this.txtDescricaoTicket);
+            this.Controls.Add(this.txtTituloTicket);
+            this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -230,7 +230,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnListagemChamadas;
+        private System.Windows.Forms.Button btnListagemDeChamados;
         private System.Windows.Forms.Button btnCriarChamado;
         private System.Windows.Forms.Button btnDashboard;
         private System.Windows.Forms.Label label1;
@@ -238,11 +238,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Button btnCadastrar;
+        private System.Windows.Forms.TextBox txtTituloTicket;
+        private System.Windows.Forms.TextBox txtDescricaoTicket;
+        private System.Windows.Forms.ComboBox cbPrioridadeTicket;
+        private System.Windows.Forms.ComboBox cbCategoriaTicket;
         private System.Windows.Forms.PictureBox pictureBox5;
     }
 }
