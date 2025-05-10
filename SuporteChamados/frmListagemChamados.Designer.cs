@@ -44,7 +44,7 @@
             this.cbStatus = new System.Windows.Forms.ComboBox();
             this.cbPrioridade = new System.Windows.Forms.ComboBox();
             this.cbCategoria = new System.Windows.Forms.ComboBox();
-            this.cbPeriodo = new System.Windows.Forms.ComboBox();
+            this.cbNivel = new System.Windows.Forms.ComboBox();
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -183,9 +183,9 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(1014, 85);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(99, 29);
+            this.label6.Size = new System.Drawing.Size(68, 29);
             this.label6.TabIndex = 10;
-            this.label6.Text = "Período";
+            this.label6.Text = "Nível";
             // 
             // cbStatus
             // 
@@ -230,14 +230,14 @@
             this.cbCategoria.Size = new System.Drawing.Size(166, 33);
             this.cbCategoria.TabIndex = 13;
             // 
-            // cbPeriodo
+            // cbNivel
             // 
-            this.cbPeriodo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbPeriodo.FormattingEnabled = true;
-            this.cbPeriodo.Location = new System.Drawing.Point(1019, 117);
-            this.cbPeriodo.Name = "cbPeriodo";
-            this.cbPeriodo.Size = new System.Drawing.Size(166, 33);
-            this.cbPeriodo.TabIndex = 14;
+            this.cbNivel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbNivel.FormattingEnabled = true;
+            this.cbNivel.Location = new System.Drawing.Point(1019, 117);
+            this.cbNivel.Name = "cbNivel";
+            this.cbNivel.Size = new System.Drawing.Size(166, 33);
+            this.cbNivel.TabIndex = 14;
             // 
             // btnPesquisar
             // 
@@ -303,7 +303,7 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.btnPesquisar);
-            this.Controls.Add(this.cbPeriodo);
+            this.Controls.Add(this.cbNivel);
             this.Controls.Add(this.cbCategoria);
             this.Controls.Add(this.cbPrioridade);
             this.Controls.Add(this.cbStatus);
@@ -343,7 +343,7 @@
         private System.Windows.Forms.ComboBox cbStatus;
         private System.Windows.Forms.ComboBox cbPrioridade;
         private System.Windows.Forms.ComboBox cbCategoria;
-        private System.Windows.Forms.ComboBox cbPeriodo;
+        private System.Windows.Forms.ComboBox cbNivel;
         private System.Windows.Forms.Button btnPesquisar;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;

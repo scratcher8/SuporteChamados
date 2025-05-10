@@ -43,6 +43,8 @@
             this.txtDescricaoTicket = new System.Windows.Forms.TextBox();
             this.cbPrioridadeTicket = new System.Windows.Forms.ComboBox();
             this.cbCategoriaTicket = new System.Windows.Forms.ComboBox();
+            this.cbNivel = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
@@ -199,12 +201,34 @@
             this.cbCategoriaTicket.Size = new System.Drawing.Size(216, 45);
             this.cbCategoriaTicket.TabIndex = 11;
             // 
+            // cbNivel
+            // 
+            this.cbNivel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbNivel.FormattingEnabled = true;
+            this.cbNivel.Location = new System.Drawing.Point(391, 664);
+            this.cbNivel.Name = "cbNivel";
+            this.cbNivel.Size = new System.Drawing.Size(216, 45);
+            this.cbNivel.TabIndex = 13;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label6.Location = new System.Drawing.Point(384, 624);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(87, 37);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "Nível";
+            // 
             // frmCriarChamado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1384, 761);
+            this.Controls.Add(this.cbNivel);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.cbCategoriaTicket);
             this.Controls.Add(this.cbPrioridadeTicket);
             this.Controls.Add(this.txtDescricaoTicket);
@@ -244,5 +268,7 @@
         private System.Windows.Forms.ComboBox cbPrioridadeTicket;
         private System.Windows.Forms.ComboBox cbCategoriaTicket;
         private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.ComboBox cbNivel;
+        private System.Windows.Forms.Label label6;
     }
 }
