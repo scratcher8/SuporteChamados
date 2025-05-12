@@ -187,6 +187,11 @@
             // 
             this.cbPrioridadeTicket.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbPrioridadeTicket.FormattingEnabled = true;
+            this.cbPrioridadeTicket.Items.AddRange(new object[] {
+            "Baixa",
+            "Média",
+            "Alta",
+            "Urgente"});
             this.cbPrioridadeTicket.Location = new System.Drawing.Point(388, 452);
             this.cbPrioridadeTicket.Name = "cbPrioridadeTicket";
             this.cbPrioridadeTicket.Size = new System.Drawing.Size(216, 45);
@@ -196,6 +201,14 @@
             // 
             this.cbCategoriaTicket.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCategoriaTicket.FormattingEnabled = true;
+            this.cbCategoriaTicket.Items.AddRange(new object[] {
+            "Hardware",
+            "Software",
+            "Rede",
+            "Conta",
+            "Segurança",
+            "Solicitações Gerais",
+            "Outro"});
             this.cbCategoriaTicket.Location = new System.Drawing.Point(391, 558);
             this.cbCategoriaTicket.Name = "cbCategoriaTicket";
             this.cbCategoriaTicket.Size = new System.Drawing.Size(216, 45);
@@ -205,6 +218,11 @@
             // 
             this.cbNivel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbNivel.FormattingEnabled = true;
+            this.cbNivel.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4"});
             this.cbNivel.Location = new System.Drawing.Point(391, 664);
             this.cbNivel.Name = "cbNivel";
             this.cbNivel.Size = new System.Drawing.Size(216, 45);
