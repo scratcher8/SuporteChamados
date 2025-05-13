@@ -19,9 +19,10 @@ namespace SuporteChamados
 
         private void btnAcessar_Click(object sender, EventArgs e)
         {
+            this.Hide();
             frmprincipal Frmprincipal = new frmprincipal();
             Frmprincipal.ShowDialog();
-            this.Hide();
+            this.Show();
         }
     }
 }

@@ -106,7 +106,7 @@
             this.btnListagemDeChamados.TabIndex = 6;
             this.btnListagemDeChamados.Text = "Listagem de chamados";
             this.btnListagemDeChamados.UseVisualStyleBackColor = true;
-            this.btnListagemDeChamados.Click += new System.EventHandler(this.button3_Click);
+            this.btnListagemDeChamados.Click += new System.EventHandler(this.AbrirListagemChamados);
             // 
             // btnCriarChamado
             // 
@@ -118,7 +118,7 @@
             this.btnCriarChamado.TabIndex = 5;
             this.btnCriarChamado.Text = "Criar chamado";
             this.btnCriarChamado.UseVisualStyleBackColor = true;
-            this.btnCriarChamado.Click += new System.EventHandler(this.button2_Click);
+            this.btnCriarChamado.Click += new System.EventHandler(this.AbrirCriarChamado);
             // 
             // btnDashboard
             // 

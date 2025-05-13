@@ -17,18 +17,20 @@ namespace SuporteChamados
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void AbrirCriarChamado(object sender, EventArgs e)
         {
+            this.Hide();
             frmCriarChamado FrmCriarChamado = new frmCriarChamado();
             FrmCriarChamado.ShowDialog();
-            this.Hide();
+            this.Show();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void AbrirListagemChamados(object sender, EventArgs e)
         {
-            frmListagemChamados FrmListagemChamados = new frmListagemChamados();
-           FrmListagemChamados.ShowDialog();
             this.Hide();
+            frmListagemChamados FrmListagemChamados = new frmListagemChamados();
+            FrmListagemChamados.ShowDialog();
+            this.Show();
         }
     }
 }
