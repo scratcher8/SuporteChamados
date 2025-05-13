@@ -15,6 +15,8 @@ namespace SuporteChamados
     {
         string strConexao = @"Data Source=.\SQLEXPRESS;Initial Catalog=dbSuporteChamados;Integrated Security=True";
         SqlConnection objConexao;
+        int idUsuario = 1;
+
         public frmCriarChamado()
         {
             InitializeComponent();
@@ -26,6 +28,27 @@ namespace SuporteChamados
             objConexao.ConnectionString = strConexao;
 
             objConexao.Open();
+
+            SqlCommand cmd = new SqlCommand("INSERT INTO tblTicket (titulo, descricao, prioridade, categoria, nivel, statusTicket, dataTicket, idSolicitante) VALUES (@titulo, @descricao, @prioridade, @categoria, @nivel, @statusTicket, @dataTicket, @idSolicitante)");
+            cmd.Connection = objConexao;
+            cmd.Parameters.AddWithValue("@titulo", txtTituloTicket.Text);
+            cmd.Parameters.AddWithValue("@descricao", txtDescricaoTicket.Text);
+            cmd.Parameters.AddWithValue("@prioridade", cbPrioridadeTicket.SelectedText);
+            cmd.Parameters.AddWithValue("@categoria", cbCategoriaTicket.SelectedText);
+            cmd.Parameters.AddWithValue("@nivel", cbNivel.SelectedText);
+            cmd.Parameters.AddWithValue("@statusTicket", "Aberto");
+            cmd.Parameters.AddWithValue("@dataTicket", DateTime.Now);
+            cmd.Parameters.AddWithValue("@idSolicitante", idUsuario);
+
+            int linhasAfetadas = cmd.ExecuteNonQuery();
+            if (linhasAfetadas > 0)
+            {
+                MessageBox.Show("Chamado registrado com sucesso!","Sucesso",MessageBoxButtons.OK);
+            }
+            else
+            {
+                MessageBox.Show("Nenhum registro inserido. Verifique os dados.", "Erro", MessageBoxButtons.OK);
+            }
 
             objConexao.Close();
         }
