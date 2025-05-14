@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -40,8 +38,7 @@
             this.cbCategoria = new System.Windows.Forms.ComboBox();
             this.cbNivel = new System.Windows.Forms.ComboBox();
             this.btnPesquisar = new System.Windows.Forms.Button();
-            this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.flpListagemChamados = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
             // 
             // label1
@@ -54,24 +51,6 @@
             this.label1.Size = new System.Drawing.Size(185, 39);
             this.label1.TabIndex = 3;
             this.label1.Text = "Chamados";
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.pictureBox1);
-            this.panel3.Location = new System.Drawing.Point(17, 139);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1155, 456);
-            this.panel3.TabIndex = 5;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::SuporteChamados.Properties.Resources.Captura_de_tela_2025_04_30_202524;
-            this.pictureBox1.Location = new System.Drawing.Point(17, 21);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1135, 413);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // label2
             // 
@@ -186,12 +165,20 @@
             this.btnPesquisar.Text = "Pesquisar";
             this.btnPesquisar.UseVisualStyleBackColor = false;
             // 
+            // flpListagemChamados
+            // 
+            this.flpListagemChamados.AutoScroll = true;
+            this.flpListagemChamados.Location = new System.Drawing.Point(17, 198);
+            this.flpListagemChamados.Name = "flpListagemChamados";
+            this.flpListagemChamados.Size = new System.Drawing.Size(1155, 401);
+            this.flpListagemChamados.TabIndex = 16;
+            // 
             // frmListagemChamados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1184, 611);
-            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.flpListagemChamados);
             this.Controls.Add(this.btnPesquisar);
             this.Controls.Add(this.cbNivel);
             this.Controls.Add(this.cbCategoria);
@@ -206,8 +193,7 @@
             this.Name = "frmListagemChamados";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Listagem de Chamados";
-            this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Load += new System.EventHandler(this.frmListagemChamados_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -215,7 +201,6 @@
 
         #endregion
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
@@ -225,6 +210,6 @@
         private System.Windows.Forms.ComboBox cbCategoria;
         private System.Windows.Forms.ComboBox cbNivel;
         private System.Windows.Forms.Button btnPesquisar;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.FlowLayoutPanel flpListagemChamados;
     }
 }
