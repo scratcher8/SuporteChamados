@@ -33,9 +33,9 @@ namespace SuporteChamados
             cmd.Connection = objConexao;
             cmd.Parameters.AddWithValue("@titulo", txtTituloTicket.Text);
             cmd.Parameters.AddWithValue("@descricao", txtDescricaoTicket.Text);
-            cmd.Parameters.AddWithValue("@prioridade", cbPrioridadeTicket.SelectedText);
-            cmd.Parameters.AddWithValue("@categoria", cbCategoriaTicket.SelectedText);
-            cmd.Parameters.AddWithValue("@nivel", cbNivel.SelectedText);
+            cmd.Parameters.AddWithValue("@prioridade", cbPrioridadeTicket.SelectedItem.ToString());
+            cmd.Parameters.AddWithValue("@categoria", cbCategoriaTicket.SelectedItem.ToString());
+            cmd.Parameters.AddWithValue("@nivel", cbNivel.SelectedItem.ToString());
             cmd.Parameters.AddWithValue("@statusTicket", "Aberto");
             cmd.Parameters.AddWithValue("@dataTicket", DateTime.Now);
             cmd.Parameters.AddWithValue("@idSolicitante", idUsuario);
