@@ -28,6 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.btnListagemDeChamados = new System.Windows.Forms.Button();
@@ -52,13 +56,13 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.chartPrioridade = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panel2.SuspendLayout();
@@ -69,9 +73,9 @@
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartPrioridade)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -305,15 +309,15 @@
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.panel7.Controls.Add(this.chartPrioridade);
             this.panel7.Controls.Add(this.pictureBox4);
             this.panel7.Controls.Add(this.pictureBox3);
-            this.panel7.Controls.Add(this.pictureBox2);
             this.panel7.Controls.Add(this.label14);
             this.panel7.Controls.Add(this.label15);
             this.panel7.Controls.Add(this.label13);
             this.panel7.Location = new System.Drawing.Point(378, 231);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(969, 239);
+            this.panel7.Size = new System.Drawing.Size(969, 277);
             this.panel7.TabIndex = 7;
             // 
             // pictureBox4
@@ -335,16 +339,6 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 6;
             this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::SuporteChamados.Properties.Resources.Captura_de_tela_2025_04_30_204919;
-            this.pictureBox2.Location = new System.Drawing.Point(35, 53);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(180, 180);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 5;
-            this.pictureBox2.TabStop = false;
             // 
             // label14
             // 
@@ -381,17 +375,17 @@
             this.panel9.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.panel9.Controls.Add(this.pictureBox1);
             this.panel9.Controls.Add(this.label12);
-            this.panel9.Location = new System.Drawing.Point(378, 476);
+            this.panel9.Location = new System.Drawing.Point(378, 535);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(969, 273);
+            this.panel9.Size = new System.Drawing.Size(969, 214);
             this.panel9.TabIndex = 9;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::SuporteChamados.Properties.Resources.Captura_de_tela_2025_04_30_201013;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 40);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 59);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(947, 230);
+            this.pictureBox1.Size = new System.Drawing.Size(947, 211);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -401,11 +395,30 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.Black;
-            this.label12.Location = new System.Drawing.Point(310, 0);
+            this.label12.Location = new System.Drawing.Point(287, 19);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(313, 37);
             this.label12.TabIndex = 0;
             this.label12.Text = "Tickets com o tempo";
+            // 
+            // chartPrioridade
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chartPrioridade.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartPrioridade.Legends.Add(legend1);
+            this.chartPrioridade.Location = new System.Drawing.Point(25, 53);
+            this.chartPrioridade.Name = "chartPrioridade";
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series1.Legend = "Legend1";
+            series1.Name = "Prioridade";
+            this.chartPrioridade.Series.Add(series1);
+            this.chartPrioridade.Size = new System.Drawing.Size(236, 194);
+            this.chartPrioridade.TabIndex = 8;
+            this.chartPrioridade.Text = "chart1";
+            title1.Name = "Tickets por Prioridade";
+            this.chartPrioridade.Titles.Add(title1);
             // 
             // frmprincipal
             // 
@@ -427,6 +440,7 @@
             this.Name = "frmprincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dashboard";
+            this.Load += new System.EventHandler(this.frmprincipal_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.panel2.ResumeLayout(false);
@@ -442,10 +456,10 @@
             this.panel7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartPrioridade)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -480,9 +494,9 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartPrioridade;
     }
 }
