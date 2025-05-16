@@ -19,6 +19,8 @@ namespace SuporteChamados
         public frmListagemChamados()
         {
             InitializeComponent();
+
+
         }
 
         public void CarregarListagem()
@@ -56,6 +58,75 @@ namespace SuporteChamados
         private void frmListagemChamados_Load(object sender, EventArgs e)
         {
             CarregarListagem();
+
+            cbStatus.SelectedIndex = 0;
+            cbPrioridade.SelectedIndex = 0;
+            cbCategoria.SelectedIndex = 0;
+            cbNivel.SelectedIndex = 0;
+        }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+
+            string status = cbStatus.SelectedItem?.ToString();
+            string prioridade = cbPrioridade.SelectedItem?.ToString();
+            string categoria = cbCategoria.SelectedItem?.ToString();
+            string nivel = cbNivel.SelectedItem?.ToString();
+
+            using (SqlConnection conexao = new SqlConnection(strConexao))
+            {
+                string query = "SELECT * FROM tblTicket WHERE 1=1";
+
+                if (status != "Todos")
+                    query += " AND statusTicket = @status";
+
+                if (prioridade != "Todos" && !string.IsNullOrEmpty(prioridade))
+                    query += " AND prioridade = @prioridade";
+
+                if (categoria != "Todos" && !string.IsNullOrEmpty(categoria))
+                    query += " AND categoria = @categoria";
+
+                if (nivel != "Todos" && !string.IsNullOrEmpty(nivel))
+                    query += " AND nivel = @nivel";
+
+                query += " ORDER BY dataTicket DESC";
+
+                SqlCommand cmd = new SqlCommand(query, conexao);
+
+                if (status != "Todos" && !string.IsNullOrEmpty(status))
+                    cmd.Parameters.AddWithValue("@status", status);
+                if (prioridade != "Todos" && !string.IsNullOrEmpty(prioridade))
+                    cmd.Parameters.AddWithValue("@prioridade", prioridade);
+                if (categoria != "Todos" && !string.IsNullOrEmpty(categoria))
+                    cmd.Parameters.AddWithValue("@categoria", categoria);
+                if (nivel != "Todos" && !string.IsNullOrEmpty(nivel))
+                    cmd.Parameters.AddWithValue("@nivel", nivel);
+
+                conexao.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                flpListagemChamados.Controls.Clear();
+
+                while (reader.Read())
+                {
+                    ucChamados uc = new ucChamados();
+                    uc.IdChamado = Convert.ToInt32(reader["idTicket"]);
+                    uc.Titulo = reader["titulo"].ToString();
+                    uc.Descricao = reader["descricao"].ToString();
+                    uc.Status = reader["statusTicket"].ToString();
+                    uc.Prioridade = reader["prioridade"].ToString();
+                    uc.Categoria = reader["categoria"].ToString();
+                    uc.Nivel = reader["nivel"].ToString();
+                    uc.Data = Convert.ToDateTime(reader["dataTicket"]).ToString("dd/MM/yyyy");
+
+                    flpListagemChamados.Controls.Add(uc);
+                }
+
+                conexao.Close();
+            }
+
+
+
         }
     }
 }

@@ -94,9 +94,11 @@
             // 
             // cbStatus
             // 
+            this.cbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbStatus.FormattingEnabled = true;
             this.cbStatus.Items.AddRange(new object[] {
+            "Todos",
             "Aberto",
             "Em andamento",
             "Pendente",
@@ -109,9 +111,11 @@
             // 
             // cbPrioridade
             // 
+            this.cbPrioridade.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbPrioridade.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbPrioridade.FormattingEnabled = true;
             this.cbPrioridade.Items.AddRange(new object[] {
+            "Todos",
             "Baixa",
             "Média",
             "Alta",
@@ -123,15 +127,18 @@
             // 
             // cbCategoria
             // 
+            this.cbCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCategoria.FormattingEnabled = true;
             this.cbCategoria.Items.AddRange(new object[] {
+            "Todos",
             "Hardware",
             "Software",
             "Rede",
             "Conta",
             "Segurança",
             "Solicitações Gerais",
+            "Acesso",
             "Outro"});
             this.cbCategoria.Location = new System.Drawing.Point(471, 94);
             this.cbCategoria.Name = "cbCategoria";
@@ -140,13 +147,14 @@
             // 
             // cbNivel
             // 
+            this.cbNivel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbNivel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbNivel.FormattingEnabled = true;
             this.cbNivel.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4"});
+            "N1",
+            "N2",
+            "N3",
+            "N4"});
             this.cbNivel.Location = new System.Drawing.Point(698, 94);
             this.cbNivel.Name = "cbNivel";
             this.cbNivel.Size = new System.Drawing.Size(166, 33);
@@ -164,6 +172,7 @@
             this.btnPesquisar.TabIndex = 15;
             this.btnPesquisar.Text = "Pesquisar";
             this.btnPesquisar.UseVisualStyleBackColor = false;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
             // flpListagemChamados
             // 
