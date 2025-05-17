@@ -38,7 +38,7 @@ namespace SuporteChamados
             cmd.Parameters.AddWithValue("@nivel", cbNivel.SelectedText);
             cmd.Parameters.AddWithValue("@statusTicket", "Aberto");
             cmd.Parameters.AddWithValue("@dataTicket", DateTime.Now);
-            cmd.Parameters.AddWithValue("@idSolicitante", idUsuario);
+            cmd.Parameters.AddWithValue("@idSolicitante", IdUsuario.IDUsuario);
 
             int linhasAfetadas = cmd.ExecuteNonQuery();
             if (linhasAfetadas > 0)
