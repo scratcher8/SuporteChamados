@@ -80,26 +80,26 @@ namespace SuporteChamados
                 if (status != "Todos")
                     query += " AND statusTicket = @status";
 
-                if (prioridade != "Todos" && !string.IsNullOrEmpty(prioridade))
+                if (prioridade != "Todos") 
                     query += " AND prioridade = @prioridade";
 
-                if (categoria != "Todos" && !string.IsNullOrEmpty(categoria))
-                    query += " AND categoria = @categoria";
+                if (categoria != "Todos" )
+                    query += " AND categoria = @categoria"; 
 
-                if (nivel != "Todos" && !string.IsNullOrEmpty(nivel))
+                if (nivel != "Todos")
                     query += " AND nivel = @nivel";
 
                 query += " ORDER BY dataTicket DESC";
 
                 SqlCommand cmd = new SqlCommand(query, conexao);
 
-                if (status != "Todos" && !string.IsNullOrEmpty(status))
+                if (status != "Todos")
                     cmd.Parameters.AddWithValue("@status", status);
-                if (prioridade != "Todos" && !string.IsNullOrEmpty(prioridade))
+                if (prioridade != "Todos")
                     cmd.Parameters.AddWithValue("@prioridade", prioridade);
-                if (categoria != "Todos" && !string.IsNullOrEmpty(categoria))
+                if (categoria != "Todos")
                     cmd.Parameters.AddWithValue("@categoria", categoria);
-                if (nivel != "Todos" && !string.IsNullOrEmpty(nivel))
+                if (nivel != "Todos")
                     cmd.Parameters.AddWithValue("@nivel", nivel);
 
                 conexao.Open();
@@ -130,3 +130,4 @@ namespace SuporteChamados
         }
     }
 }
+
