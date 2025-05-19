@@ -26,22 +26,23 @@ namespace SuporteChamados
             if (string.IsNullOrEmpty(usuario) || string.IsNullOrEmpty(senha))
             {
                 MessageBox.Show("Por favor, preencha todos os campos.");
-                return; 
+                return;
             }
-
-            // Substitua "SUA_STRING_DE_CONEXAO" pela  string de conexão real
-            using (SqlConnection conn = new SqlConnection("SUA_STRING_DE_CONEXAO"))
+            //string de conexão
+            string stringdeConexao = @"Data Source =.\SQLEXPRESS; Initial Catalog = dbSuporteChamados; Integrated Security = True";
+            using (SqlConnection conn = new SqlConnection(stringdeConexao))
             {
+
                 try
                 {
                     conn.Open();
-                    string query = "SELECT id, nome FROM usuarios WHERE login = @usuario AND senha = @senha";
+                    string query = "SELECT idUsuario, nome FROM tblUsuario WHERE loginUsuario = @usuario AND senha = @senha";
 
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
-                        
+
                         cmd.Parameters.AddWithValue("@usuario", usuario);
-                        cmd.Parameters.AddWithValue("@senha", senha); 
+                        cmd.Parameters.AddWithValue("@senha", senha);
 
                         SqlDataReader reader = cmd.ExecuteReader();
 
