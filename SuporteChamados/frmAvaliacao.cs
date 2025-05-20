@@ -61,6 +61,7 @@ namespace SuporteChamados
                         {
                             MessageBox.Show("Avaliação enviada com sucesso!");
                             LimparFormulario();
+                            this.Close();
                         }
                         else
                         {
