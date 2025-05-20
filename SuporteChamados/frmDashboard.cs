@@ -222,5 +222,13 @@ namespace SuporteChamados
             chartCategoria.Series["Categoria"].LegendText = "#VALX";  
             chartCategoria.Legends[0].Docking = Docking.Right;
         }
+
+        private void Avaliacao(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmAvaliacao Frmavaliacao = new frmAvaliacao();
+            Frmavaliacao.ShowDialog();
+            this.Show();
+        }
     }
 }

@@ -169,5 +169,11 @@
   <ItemGroup>
     <None Include="Resources\Design sem nome.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5356223.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\modern-phone-icon-in-bubble-speech-vector-5010128.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
