@@ -53,6 +53,12 @@
     <Compile Include="frmAvaliacao.Designer.cs">
       <DependentUpon>frmAvaliacao.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmExibicaoUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmExibicaoUsuario.Designer.cs">
+      <DependentUpon>frmExibicaoUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +94,9 @@
     </Compile>
     <EmbeddedResource Include="frmAvaliacao.resx">
       <DependentUpon>frmAvaliacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmExibicaoUsuario.resx">
+      <DependentUpon>frmExibicaoUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>

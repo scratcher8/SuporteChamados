@@ -100,7 +100,7 @@
             // btnCadastrar
             // 
             this.btnCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrar.Location = new System.Drawing.Point(549, 417);
+            this.btnCadastrar.Location = new System.Drawing.Point(549, 436);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(123, 32);
             this.btnCadastrar.TabIndex = 7;
@@ -161,10 +161,10 @@
             this.cbNivel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbNivel.FormattingEnabled = true;
             this.cbNivel.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4"});
+            "N1",
+            "N2",
+            "N3",
+            "N4"});
             this.cbNivel.Location = new System.Drawing.Point(495, 370);
             this.cbNivel.Name = "cbNivel";
             this.cbNivel.Size = new System.Drawing.Size(177, 32);
