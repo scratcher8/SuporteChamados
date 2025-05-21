@@ -117,7 +117,7 @@ namespace SuporteChamados
                     uc.Prioridade = reader["prioridade"].ToString();
                     uc.Categoria = reader["categoria"].ToString();
                     uc.Nivel = reader["nivel"].ToString();
-                    uc.Data = Convert.ToDateTime(reader["dataTicket"]).ToString("dd/MM/yyyy");
+                    uc.Data = Convert.ToDateTime(reader["dataTicket"]).ToString("dd/MM/yyyy HH:mm:ss");
 
                     flpListagemChamados.Controls.Add(uc);
                 }

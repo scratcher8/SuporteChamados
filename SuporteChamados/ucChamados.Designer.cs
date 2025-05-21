@@ -82,7 +82,7 @@
             this.lbCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbCategoria.Location = new System.Drawing.Point(634, 13);
             this.lbCategoria.Name = "lbCategoria";
-            this.lbCategoria.Size = new System.Drawing.Size(150, 25);
+            this.lbCategoria.Size = new System.Drawing.Size(141, 25);
             this.lbCategoria.TabIndex = 4;
             this.lbCategoria.Text = "Software";
             // 
@@ -90,11 +90,11 @@
             // 
             this.lbNivel.AutoSize = true;
             this.lbNivel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNivel.Location = new System.Drawing.Point(790, 13);
+            this.lbNivel.Location = new System.Drawing.Point(781, 13);
             this.lbNivel.Name = "lbNivel";
-            this.lbNivel.Size = new System.Drawing.Size(24, 25);
+            this.lbNivel.Size = new System.Drawing.Size(39, 25);
             this.lbNivel.TabIndex = 5;
-            this.lbNivel.Text = "4";
+            this.lbNivel.Text = "N4";
             // 
             // lbData
             // 
