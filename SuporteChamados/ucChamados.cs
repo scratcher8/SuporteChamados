@@ -69,9 +69,11 @@ namespace SuporteChamados
 
         private void btnVisualizar_Click(object sender, EventArgs e)
         {
-            frmExibicaoUsuario FrmExibicaoUsuario = new frmExibicaoUsuario(idChamado);
+            frmExibicaoUsuario FrmExibicaoUsuario = new frmExibicaoUsuario(idChamado,titulo, descricao, status, prioridade, categoria, nivel);
             FrmExibicaoUsuario.ShowDialog();
-            this.Hide();
+            this.Show();
+            
+
    
 
             //Abrir formulario levando a variável do id do chamado para ele com hide, formulario show dialog, show

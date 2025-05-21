@@ -126,6 +126,7 @@
             this.btnAtualizar.TabIndex = 19;
             this.btnAtualizar.Text = "Atualizar";
             this.btnAtualizar.UseVisualStyleBackColor = true;
+            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
             // 
             // label5
             // 
@@ -229,6 +230,7 @@
             this.Controls.Add(this.label1);
             this.Name = "frmExibicaoUsuario";
             this.Text = "frmExibicaoUsuario";
+            this.Load += new System.EventHandler(this.frmExibicaoUsuario_Load_1);
             this.ResumeLayout(false);
             this.PerformLayout();
 

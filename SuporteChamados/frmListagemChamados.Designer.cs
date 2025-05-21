@@ -39,6 +39,13 @@
             this.cbNivel = new System.Windows.Forms.ComboBox();
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.flpListagemChamados = new System.Windows.Forms.FlowLayoutPanel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -183,11 +190,88 @@
             this.flpListagemChamados.Size = new System.Drawing.Size(1155, 401);
             this.flpListagemChamados.TabIndex = 16;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(30, 164);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(27, 24);
+            this.label3.TabIndex = 17;
+            this.label3.Text = "ID";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(169, 164);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(56, 24);
+            this.label7.TabIndex = 18;
+            this.label7.Text = "Titulo";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(381, 164);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(60, 24);
+            this.label8.TabIndex = 19;
+            this.label8.Text = "Status";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(551, 164);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(96, 24);
+            this.label9.TabIndex = 20;
+            this.label9.Text = "Prioridade";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(653, 164);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(90, 24);
+            this.label10.TabIndex = 21;
+            this.label10.Text = "Categoria";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(793, 164);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(52, 24);
+            this.label11.TabIndex = 22;
+            this.label11.Text = "Nivel";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(941, 164);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(47, 24);
+            this.label12.TabIndex = 23;
+            this.label12.Text = "Data";
+            // 
             // frmListagemChamados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1184, 611);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.flpListagemChamados);
             this.Controls.Add(this.btnPesquisar);
             this.Controls.Add(this.cbNivel);
@@ -221,5 +305,12 @@
         private System.Windows.Forms.ComboBox cbNivel;
         private System.Windows.Forms.Button btnPesquisar;
         private System.Windows.Forms.FlowLayoutPanel flpListagemChamados;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
     }
 }

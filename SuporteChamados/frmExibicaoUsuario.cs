@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,12 +18,26 @@ namespace SuporteChamados
         SqlConnection objConexao;
 
         private int idChamado;
+        private string titulo;
+        private string descricao;
+        private string status;
+        private string prioridade;
+        private string categoria;
+        private string nivel;
 
-        public frmExibicaoUsuario(int idChamado)
+        public frmExibicaoUsuario(int idChamado, string titulo, string descricao, string status, string prioridade, string categoria, string nivel)
         {
             InitializeComponent();
+
             this.idChamado = idChamado;
+            this.titulo = titulo;
+            this.descricao = descricao;
+            this.status = status;
+            this.prioridade = prioridade;
+            this.categoria = categoria;
+            this.nivel = nivel;
         }
+       
        
 
         private void btnAtualizar_Click(object sender, EventArgs e)
@@ -45,6 +60,7 @@ namespace SuporteChamados
                 cmd.Parameters.AddWithValue("@nivel", cbNivel.SelectedItem.ToString());
                 cmd.Parameters.AddWithValue("@statusTicket", cbStatus.SelectedItem.ToString());
                 cmd.Parameters.AddWithValue("@idChamado", idChamado);
+                
 
                 if (cbStatus.SelectedItem.ToString() == "Resolvido" || cbStatus.SelectedItem.ToString() == "Fechado")
                 {
@@ -60,6 +76,8 @@ namespace SuporteChamados
                 if (linhasAfetadas > 0)
                 {
                     MessageBox.Show("Chamado atualizado com sucesso!", "Sucesso", MessageBoxButtons.OK);
+
+                    this.Close();
                 }
                 else
                 {
@@ -76,6 +94,17 @@ namespace SuporteChamados
             }
 
            
+        }
+
+        private void frmExibicaoUsuario_Load_1(object sender, EventArgs e)
+        {
+            txtTituloTicket.Text = titulo;
+            txtDescricaoTicket.Text = descricao;
+
+            cbStatus.SelectedItem = status;
+            cbPrioridadeTicket.SelectedItem = prioridade;
+            cbCategoriaTicket.SelectedItem = categoria;
+            cbNivel.SelectedItem = nivel;
         }
     }
 
