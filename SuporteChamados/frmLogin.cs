@@ -51,8 +51,6 @@ namespace SuporteChamados
                             IdUsuario.IDUsuario = reader.GetInt32(0);
                             IdUsuario.NomeUsuario = reader.GetString(1);
 
-                            MessageBox.Show("Login bem-sucedido!");
-
                             this.Hide();
                             frmprincipal Frmprincipal = new frmprincipal();
                             Frmprincipal.ShowDialog();

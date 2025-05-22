@@ -184,5 +184,8 @@
   <ItemGroup>
     <None Include="Resources\modern-phone-icon-in-bubble-speech-vector-5010128.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

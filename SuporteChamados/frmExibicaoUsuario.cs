@@ -14,7 +14,7 @@ namespace SuporteChamados
 {
     public partial class frmExibicaoUsuario : Form
     {
-        string strConexao = @"Data Source=CATEAS21104172\SQLEXPRESS;Initial Catalog = dbSuporteChamados; Integrated Security = True";
+        string strConexao = @"Data Source=.\SQLEXPRESS;Initial Catalog = dbSuporteChamados; Integrated Security = True";
         SqlConnection objConexao;
 
         private int idChamado;
@@ -98,6 +98,7 @@ namespace SuporteChamados
 
         private void frmExibicaoUsuario_Load_1(object sender, EventArgs e)
         {
+            lbTicketNum.Text = "Ticket #"+idChamado.ToString();
             txtTituloTicket.Text = titulo;
             txtDescricaoTicket.Text = descricao;
 

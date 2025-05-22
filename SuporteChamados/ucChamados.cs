@@ -72,11 +72,8 @@ namespace SuporteChamados
             frmExibicaoUsuario FrmExibicaoUsuario = new frmExibicaoUsuario(idChamado,titulo, descricao, status, prioridade, categoria, nivel);
             FrmExibicaoUsuario.ShowDialog();
             this.Show();
-            
 
-   
-
-            //Abrir formulario levando a variável do id do chamado para ele com hide, formulario show dialog, show
+            (this.ParentForm as frmListagemChamados).CarregarListagem();
         }
     }
 }

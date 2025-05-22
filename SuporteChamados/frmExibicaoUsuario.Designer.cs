@@ -39,13 +39,14 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbTicketNum = new System.Windows.Forms.Label();
             this.cbStatus = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // cbNivel
             // 
+            this.cbNivel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbNivel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbNivel.FormattingEnabled = true;
             this.cbNivel.Items.AddRange(new object[] {
@@ -63,7 +64,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label6.Location = new System.Drawing.Point(279, 455);
+            this.label6.Location = new System.Drawing.Point(279, 456);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(68, 29);
             this.label6.TabIndex = 24;
@@ -71,6 +72,7 @@
             // 
             // cbCategoriaTicket
             // 
+            this.cbCategoriaTicket.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCategoriaTicket.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCategoriaTicket.FormattingEnabled = true;
             this.cbCategoriaTicket.Items.AddRange(new object[] {
@@ -80,6 +82,7 @@
             "Conta",
             "Segurança",
             "Solicitações Gerais",
+            "Acesso",
             "Outro"});
             this.cbCategoriaTicket.Location = new System.Drawing.Point(284, 380);
             this.cbCategoriaTicket.Name = "cbCategoriaTicket";
@@ -88,6 +91,7 @@
             // 
             // cbPrioridadeTicket
             // 
+            this.cbPrioridadeTicket.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbPrioridadeTicket.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbPrioridadeTicket.FormattingEnabled = true;
             this.cbPrioridadeTicket.Items.AddRange(new object[] {
@@ -120,7 +124,7 @@
             // btnAtualizar
             // 
             this.btnAtualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAtualizar.Location = new System.Drawing.Point(588, 437);
+            this.btnAtualizar.Location = new System.Drawing.Point(577, 486);
             this.btnAtualizar.Name = "btnAtualizar";
             this.btnAtualizar.Size = new System.Drawing.Size(123, 32);
             this.btnAtualizar.TabIndex = 19;
@@ -172,19 +176,20 @@
             this.label2.TabIndex = 15;
             this.label2.Text = "Título";
             // 
-            // label1
+            // lbTicketNum
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(38, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(212, 39);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "Novo Ticket";
+            this.lbTicketNum.AutoSize = true;
+            this.lbTicketNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTicketNum.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lbTicketNum.Location = new System.Drawing.Point(38, 20);
+            this.lbTicketNum.Name = "lbTicketNum";
+            this.lbTicketNum.Size = new System.Drawing.Size(117, 39);
+            this.lbTicketNum.TabIndex = 14;
+            this.lbTicketNum.Text = "Ticket";
             // 
             // cbStatus
             // 
+            this.cbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbStatus.FormattingEnabled = true;
             this.cbStatus.Items.AddRange(new object[] {
@@ -203,7 +208,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label7.Location = new System.Drawing.Point(40, 440);
+            this.label7.Location = new System.Drawing.Point(40, 456);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(79, 29);
             this.label7.TabIndex = 26;
@@ -213,7 +218,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(775, 588);
+            this.ClientSize = new System.Drawing.Size(764, 561);
             this.Controls.Add(this.cbStatus);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.cbNivel);
@@ -227,9 +232,10 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lbTicketNum);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmExibicaoUsuario";
-            this.Text = "frmExibicaoUsuario";
+            this.Text = "Exibição do Ticket";
             this.Load += new System.EventHandler(this.frmExibicaoUsuario_Load_1);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -249,7 +255,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbTicketNum;
         private System.Windows.Forms.ComboBox cbStatus;
         private System.Windows.Forms.Label label7;
     }

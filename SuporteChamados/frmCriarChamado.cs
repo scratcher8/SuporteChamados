@@ -44,6 +44,7 @@ namespace SuporteChamados
             if (linhasAfetadas > 0)
             {
                 MessageBox.Show("Chamado registrado com sucesso!","Sucesso",MessageBoxButtons.OK);
+                this.Close();
             }
             else
             {

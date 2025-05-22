@@ -43,6 +43,7 @@
             // cmbQualidade
             // 
             this.cmbQualidade.BackColor = System.Drawing.SystemColors.Window;
+            this.cmbQualidade.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbQualidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbQualidade.FormattingEnabled = true;
             this.cmbQualidade.Items.AddRange(new object[] {
@@ -59,13 +60,14 @@
             // cmbTempodeEspera
             // 
             this.cmbTempodeEspera.BackColor = System.Drawing.SystemColors.Window;
+            this.cmbTempodeEspera.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTempodeEspera.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbTempodeEspera.FormattingEnabled = true;
             this.cmbTempodeEspera.Items.AddRange(new object[] {
             "Rápido",
             "Moderado",
             "Demorado"});
-            this.cmbTempodeEspera.Location = new System.Drawing.Point(58, 258);
+            this.cmbTempodeEspera.Location = new System.Drawing.Point(58, 255);
             this.cmbTempodeEspera.Name = "cmbTempodeEspera";
             this.cmbTempodeEspera.Size = new System.Drawing.Size(157, 28);
             this.cmbTempodeEspera.TabIndex = 1;
@@ -73,6 +75,7 @@
             // cmbTempoAtendimento
             // 
             this.cmbTempoAtendimento.BackColor = System.Drawing.SystemColors.Window;
+            this.cmbTempoAtendimento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTempoAtendimento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbTempoAtendimento.FormattingEnabled = true;
             this.cmbTempoAtendimento.Items.AddRange(new object[] {
@@ -100,7 +103,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(53, 226);
+            this.label1.Location = new System.Drawing.Point(53, 223);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(208, 29);
             this.label1.TabIndex = 5;
@@ -169,7 +172,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Info;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(797, 450);
             this.Controls.Add(this.rbNaoResolveu);
             this.Controls.Add(this.rbResolveu);
@@ -181,8 +184,10 @@
             this.Controls.Add(this.cmbTempoAtendimento);
             this.Controls.Add(this.cmbTempodeEspera);
             this.Controls.Add(this.cmbQualidade);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmAvaliacao";
-            this.Text = "frmAvaliacao";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Avaliação de Atendimento";
             this.ResumeLayout(false);
             this.PerformLayout();
 

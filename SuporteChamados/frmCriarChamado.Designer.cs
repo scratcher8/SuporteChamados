@@ -100,7 +100,7 @@
             // btnCadastrar
             // 
             this.btnCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrar.Location = new System.Drawing.Point(549, 436);
+            this.btnCadastrar.Location = new System.Drawing.Point(549, 438);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(123, 32);
             this.btnCadastrar.TabIndex = 7;
@@ -127,6 +127,7 @@
             // 
             // cbPrioridadeTicket
             // 
+            this.cbPrioridadeTicket.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbPrioridadeTicket.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbPrioridadeTicket.FormattingEnabled = true;
             this.cbPrioridadeTicket.Items.AddRange(new object[] {
@@ -141,6 +142,7 @@
             // 
             // cbCategoriaTicket
             // 
+            this.cbCategoriaTicket.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCategoriaTicket.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCategoriaTicket.FormattingEnabled = true;
             this.cbCategoriaTicket.Items.AddRange(new object[] {
@@ -150,6 +152,7 @@
             "Conta",
             "Segurança",
             "Solicitações Gerais",
+            "Acesso",
             "Outro"});
             this.cbCategoriaTicket.Location = new System.Drawing.Point(256, 370);
             this.cbCategoriaTicket.Name = "cbCategoriaTicket";
@@ -158,6 +161,7 @@
             // 
             // cbNivel
             // 
+            this.cbNivel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbNivel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbNivel.FormattingEnabled = true;
             this.cbNivel.Items.AddRange(new object[] {
@@ -186,7 +190,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(760, 514);
+            this.ClientSize = new System.Drawing.Size(734, 511);
             this.Controls.Add(this.cbNivel);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.cbCategoriaTicket);

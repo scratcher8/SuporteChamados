@@ -143,6 +143,16 @@ namespace SuporteChamados.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap download {
+            get {
+                object obj = ResourceManager.GetObject("download", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap modern_phone_icon_in_bubble_speech_vector_5010128 {
             get {
                 object obj = ResourceManager.GetObject("modern-phone-icon-in-bubble-speech-vector-5010128", resourceCulture);
