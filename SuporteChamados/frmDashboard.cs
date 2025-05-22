@@ -27,6 +27,8 @@ namespace SuporteChamados
             frmCriarChamado FrmCriarChamado = new frmCriarChamado();
             FrmCriarChamado.ShowDialog();
             this.Show();
+
+            AtualizarGeral();
         }
 
         private void AbrirListagemChamados(object sender, EventArgs e)
@@ -35,15 +37,22 @@ namespace SuporteChamados
             frmListagemChamados FrmListagemChamados = new frmListagemChamados();
             FrmListagemChamados.ShowDialog();
             this.Show();
+
+            AtualizarGeral();
         }
 
-        private void frmprincipal_Load(object sender, EventArgs e)
+        private void AtualizarGeral()
         {
             AtualizarDashboard();
             CarregarGraficoPrioridade();
             CarregarGraficoResolucao();
             CarregarTicketsTempo();
             CarregarTicketsCategoria();
+        }
+
+        private void frmprincipal_Load(object sender, EventArgs e)
+        {
+            AtualizarGeral();
         }
 
         private void AtualizarDashboard()

@@ -136,7 +136,7 @@
             this.btnAvaliar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnAvaliar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnAvaliar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAvaliar.Location = new System.Drawing.Point(643, 340);
+            this.btnAvaliar.Location = new System.Drawing.Point(615, 339);
             this.btnAvaliar.Name = "btnAvaliar";
             this.btnAvaliar.Size = new System.Drawing.Size(123, 32);
             this.btnAvaliar.TabIndex = 8;
@@ -173,7 +173,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(797, 450);
+            this.ClientSize = new System.Drawing.Size(784, 431);
             this.Controls.Add(this.rbNaoResolveu);
             this.Controls.Add(this.rbResolveu);
             this.Controls.Add(this.btnAvaliar);
