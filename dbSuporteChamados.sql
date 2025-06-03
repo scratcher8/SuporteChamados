@@ -42,10 +42,8 @@ CREATE TABLE tblAvaliacao
 	qualidade INT,
 	tempoEspera INT,
 	tempoAtendimento INT,
-	idTicket INT NOT NULL
+	resolvido BIT
 );
-
-ALTER TABLE tblAvaliacao ADD CONSTRAINT FK_Avaliacao_Ticket FOREIGN KEY(idTicket) REFERENCES tblTicket(idTicket);
 
 
 
@@ -62,48 +60,48 @@ INSERT INTO tblUsuario (nome, loginUsuario, senha) VALUES
 ('Joaquim Rocha', 'joaquim', '3456');
 
 INSERT INTO tblTicket (titulo, descricao, prioridade, categoria, nivel, statusTicket, dataTicket, dataFechamento, idSolicitante) VALUES
-('Erro no login',        'Usu·rio n„o consegue autenticar no sistema.',      'Urgente', 'Acesso',     'N1', 'Aberto',   '2025-05-14 10:15:00', NULL, 1),
-('Impressora offline',   'Impressora da sala 3 n„o responde.',                 'Alta',    'Hardware',   'N2', 'Em Andamento',   '2025-05-13 10:15:00', NULL, 2),
-('Erro de ortografia',   'Texto no relatÛrio exibe caractere estranho.',       'MÈdia',   'Software',   'N3', 'Pendente',   '2025-05-12 10:15:00', NULL, 3),
-('Conex„o intermitente', 'Wi-Fi cai a cada 10 minutos no setor financeiro.',   'Alta',    'Rede',       'N4', 'Resolvido',   '2025-05-11 10:15:00', '2025-05-11 11:15:00', 4),
-('SolicitaÁ„o de VPN',   'Preciso de acesso VPN para trabalho remoto.',        'Baixa',   'Acesso',     'N1', 'Fechado', '2025-05-10 10:15:00', '2025-05-10 11:00:00', 5),
-('Laptop n„o liga', 'O computador n„o inicia apÛs atualizaÁ„o de BIOS.', 'Alta', 'Hardware', 'N2', 'Aberto',      '2025-04-01 09:15:00', NULL, 1),
-('Erro 404 no portal', 'Ao acessar o portal interno aparece erro 404.',           'MÈdia', 'Rede',     'N2', 'Em Andamento','2025-03-25 14:30:00', NULL, 2),
-('SolicitaÁ„o de conta', 'Criar conta para novo colaborador.',                   'Baixa',  'Conta',    'N3', 'Resolvido',   '2025-02-10 11:00:00', '2025-02-10 12:00:00', 3),
-('AntivÌrus desatualizado','Verificar atualizaÁ„o do antivÌrus corporativo.', 'MÈdia', 'SeguranÁa','N2', 'Pendente',    '2025-03-05 16:45:00', NULL, 4),
-('Acesso VPN bloqueado',   'VPN n„o conecta apÛs mudanÁa de senha.',           'Alta',   'Conta',    'N1', 'Aberto',      '2025-04-02 08:20:00', NULL, 5),
-('Pedido de mouse',        'Solicitar mouse sem fio para estaÁ„o de trabalho.','Baixa', 'SolicitaÁıes Gerais','N3','Fechado','2025-01-15 10:10:00', '2025-01-15 10:30:00', 6),
-('Falha no SSD',           'Disco SSD externo n„o È reconhecido.',           'Urgente','Hardware', 'N1', 'Em Andamento','2025-04-10 13:00:00', NULL, 7),
-('Bug em sistema RH',      'Erro ao calcular fÈrias no mÛdulo de RH.',       'Alta',   'Software', 'N2', 'Aberto',      '2025-03-18 09:50:00', NULL, 8),
-('Login Outlook',          'Usu·rio n„o consegue logar no Outlook Web.',     'MÈdia',  'Conta',    'N2', 'Resolvido',   '2025-02-28 17:30:00', '2025-02-28 18:00:00', 9),
-('FormataÁ„o PC',          'Solicitar formataÁ„o de m·quina lenta.',         'Alta',   'Hardware', 'N2', 'Pendente',    '2025-03-12 15:00:00', NULL, 10),
-('Permiss„o de pasta',     'Conceder acesso ‡ pasta de projetos.',           'Alta',   'Conta',    'N1', 'Resolvido',   '2025-01-22 11:20:00', '2025-01-22 11:45:00', 1),
-('Wi-Fi inst·vel',         'Conex„o cai frequentemente no 5∫ andar.',       'MÈdia',  'Rede',     'N2', 'Em Andamento','2025-04-08 10:40:00', NULL, 2),
-('Erro no ERP',            'MÛdulo financeiro trava ao gerar relatÛrio.',    'Urgente','Software', 'N1', 'Aberto',      '2025-03-30 14:55:00', NULL, 3),
-('SolicitaÁ„o de pendrive','Necessita pendrive de 16GB.',                   'Baixa',  'SolicitaÁıes Gerais','N3','Fechado','2025-02-05 09:05:00', '2025-02-05 09:30:00', 4),
-('Bloqueio de site',       'Site externo bloqueado no firewall.',            'MÈdia',  'SeguranÁa','N2', 'Resolvido',   '2025-01-30 16:15:00', '2025-01-30 16:45:00', 5),
+('Erro no login',        'Usu√°rio n√£o consegue autenticar no sistema.',      'Urgente', 'Acesso',     'N1', 'Aberto',   '2025-05-14 10:15:00', NULL, 1),
+('Impressora offline',   'Impressora da sala 3 n√£o responde.',                 'Alta',    'Hardware',   'N2', 'Em Andamento',   '2025-05-13 10:15:00', NULL, 2),
+('Erro de ortografia',   'Texto no relat√≥rio exibe caractere estranho.',       'M√©dia',   'Software',   'N3', 'Pendente',   '2025-05-12 10:15:00', NULL, 3),
+('Conex√£o intermitente', 'Wi-Fi cai a cada 10 minutos no setor financeiro.',   'Alta',    'Rede',       'N4', 'Resolvido',   '2025-05-11 10:15:00', '2025-05-11 11:15:00', 4),
+('Solicita√ß√£o de VPN',   'Preciso de acesso VPN para trabalho remoto.',        'Baixa',   'Acesso',     'N1', 'Fechado', '2025-05-10 10:15:00', '2025-05-10 11:00:00', 5),
+('Laptop n√£o liga', 'O computador n√£o inicia ap√≥s atualiza√ß√£o de BIOS.', 'Alta', 'Hardware', 'N2', 'Aberto',      '2025-04-01 09:15:00', NULL, 1),
+('Erro 404 no portal', 'Ao acessar o portal interno aparece erro 404.',           'M√©dia', 'Rede',     'N2', 'Em Andamento','2025-03-25 14:30:00', NULL, 2),
+('Solicita√ß√£o de conta', 'Criar conta para novo colaborador.',                   'Baixa',  'Conta',    'N3', 'Resolvido',   '2025-02-10 11:00:00', '2025-02-10 12:00:00', 3),
+('Antiv√≠rus desatualizado','Verificar atualiza√ß√£o do antiv√≠rus corporativo.', 'M√©dia', 'Seguran√ßa','N2', 'Pendente',    '2025-03-05 16:45:00', NULL, 4),
+('Acesso VPN bloqueado',   'VPN n√£o conecta ap√≥s mudan√ßa de senha.',           'Alta',   'Conta',    'N1', 'Aberto',      '2025-04-02 08:20:00', NULL, 5),
+('Pedido de mouse',        'Solicitar mouse sem fio para esta√ß√£o de trabalho.','Baixa', 'Solicita√ß√µes Gerais','N3','Fechado','2025-01-15 10:10:00', '2025-01-15 10:30:00', 6),
+('Falha no SSD',           'Disco SSD externo n√£o √© reconhecido.',           'Urgente','Hardware', 'N1', 'Em Andamento','2025-04-10 13:00:00', NULL, 7),
+('Bug em sistema RH',      'Erro ao calcular f√©rias no m√≥dulo de RH.',       'Alta',   'Software', 'N2', 'Aberto',      '2025-03-18 09:50:00', NULL, 8),
+('Login Outlook',          'Usu√°rio n√£o consegue logar no Outlook Web.',     'M√©dia',  'Conta',    'N2', 'Resolvido',   '2025-02-28 17:30:00', '2025-02-28 18:00:00', 9),
+('Formata√ß√£o PC',          'Solicitar formata√ß√£o de m√°quina lenta.',         'Alta',   'Hardware', 'N2', 'Pendente',    '2025-03-12 15:00:00', NULL, 10),
+('Permiss√£o de pasta',     'Conceder acesso √† pasta de projetos.',           'Alta',   'Conta',    'N1', 'Resolvido',   '2025-01-22 11:20:00', '2025-01-22 11:45:00', 1),
+('Wi-Fi inst√°vel',         'Conex√£o cai frequentemente no 5¬∫ andar.',       'M√©dia',  'Rede',     'N2', 'Em Andamento','2025-04-08 10:40:00', NULL, 2),
+('Erro no ERP',            'M√≥dulo financeiro trava ao gerar relat√≥rio.',    'Urgente','Software', 'N1', 'Aberto',      '2025-03-30 14:55:00', NULL, 3),
+('Solicita√ß√£o de pendrive','Necessita pendrive de 16GB.',                   'Baixa',  'Solicita√ß√µes Gerais','N3','Fechado','2025-02-05 09:05:00', '2025-02-05 09:30:00', 4),
+('Bloqueio de site',       'Site externo bloqueado no firewall.',            'M√©dia',  'Seguran√ßa','N2', 'Resolvido',   '2025-01-30 16:15:00', '2025-01-30 16:45:00', 5),
 ('Impressora sem tinta',   'Impressora 3-D sem filamento.',                 'Baixa',  'Hardware', 'N3', 'Aberto',      '2025-04-12 12:25:00', NULL, 6),
-('AtualizaÁ„o Windows',    'AtualizaÁ„o falha na reinicializaÁ„o.',          'Alta',   'Software', 'N2', 'Pendente',    '2025-03-20 08:30:00', NULL, 7),
-('E-mail n„o envia',       'Outlook retorna erro ao enviar mensagem.',       'MÈdia',  'Conta',    'N2', 'Em Andamento','2025-02-18 14:00:00', NULL, 8),
-('Rota de rede ausente',   'Servidor n„o alcanÁ·vel via ping.',              'Alta',   'Rede',     'N1', 'Aberto',      '2025-03-28 09:45:00', NULL, 9),
-('Cadastro duplicado',     'Usu·rio aparece duas vezes no AD.',             'Baixa',  'Conta',    'N3', 'Resolvido',   '2025-01-10 10:30:00', '2025-01-10 11:00:00', 10),
-('Vazamento de dados',     'Suspeita de vazamento via e-mail externo.',     'Urgente','SeguranÁa','N1', 'Pendente',    '2025-04-15 11:15:00', NULL, 1),
-('SolicitaÁ„o de cadeira', 'Solicitar cadeira ergonÙmica.',                 'Baixa',  'SolicitaÁıes Gerais','N3','Fechado','2025-02-25 13:00:00', '2025-02-25 13:15:00', 2),
-('Falha no backup',        'Backup noturno n„o completou.',                 'Alta',   'SolicitaÁıes Gerais','N2','Em Andamento','2025-03-02 06:30:00', NULL, 3),
-('Erro ao remover software','Sem permiss„o para desinstalar app.',          'MÈdia',  'Software', 'N2', 'Resolvido',   '2025-01-29 15:40:00', '2025-01-29 16:00:00', 4),
-('VPN desconecta',         'Conex„o VPN cai apÛs 30 minutos.',              'Alta',   'Rede',     'N2', 'Pendente',    '2025-04-05 08:55:00', NULL, 5),
-('Configurar scanner',     'Instalar driver de scanner MarcaX.',            'MÈdia',  'Hardware', 'N3', 'Aberto',      '2025-02-14 11:45:00', NULL, 6),
-('Permiss„o API',          'Dar acesso ‡ API interna para time dev.',       'Urgente','Conta',    'N1', 'Aberto',      '2025-03-22 10:10:00', NULL, 7),
-('Ataque de phishing',     'Usu·rio clicou em link suspeito.',              'Urgente','SeguranÁa','N1', 'Em Andamento','2025-04-09 12:00:00', NULL, 8),
-('D˙vida processo',        'Como solicitar reembolso de despesas?',         'Baixa',  'SolicitaÁıes Gerais','N3','Resolvido','2025-01-18 09:20:00', '2025-01-18 09:45:00', 9),
-('Outro issue genÈrico',   'DescriÁ„o genÈrica para caso "Outro".',        'MÈdia',  'Outro',    'N2', 'Fechado',     '2025-02-07 14:35:00', '2025-02-07 15:00:00', 10);
+('Atualiza√ß√£o Windows',    'Atualiza√ß√£o falha na reinicializa√ß√£o.',          'Alta',   'Software', 'N2', 'Pendente',    '2025-03-20 08:30:00', NULL, 7),
+('E-mail n√£o envia',       'Outlook retorna erro ao enviar mensagem.',       'M√©dia',  'Conta',    'N2', 'Em Andamento','2025-02-18 14:00:00', NULL, 8),
+('Rota de rede ausente',   'Servidor n√£o alcan√ß√°vel via ping.',              'Alta',   'Rede',     'N1', 'Aberto',      '2025-03-28 09:45:00', NULL, 9),
+('Cadastro duplicado',     'Usu√°rio aparece duas vezes no AD.',             'Baixa',  'Conta',    'N3', 'Resolvido',   '2025-01-10 10:30:00', '2025-01-10 11:00:00', 10),
+('Vazamento de dados',     'Suspeita de vazamento via e-mail externo.',     'Urgente','Seguran√ßa','N1', 'Pendente',    '2025-04-15 11:15:00', NULL, 1),
+('Solicita√ß√£o de cadeira', 'Solicitar cadeira ergon√¥mica.',                 'Baixa',  'Solicita√ß√µes Gerais','N3','Fechado','2025-02-25 13:00:00', '2025-02-25 13:15:00', 2),
+('Falha no backup',        'Backup noturno n√£o completou.',                 'Alta',   'Solicita√ß√µes Gerais','N2','Em Andamento','2025-03-02 06:30:00', NULL, 3),
+('Erro ao remover software','Sem permiss√£o para desinstalar app.',          'M√©dia',  'Software', 'N2', 'Resolvido',   '2025-01-29 15:40:00', '2025-01-29 16:00:00', 4),
+('VPN desconecta',         'Conex√£o VPN cai ap√≥s 30 minutos.',              'Alta',   'Rede',     'N2', 'Pendente',    '2025-04-05 08:55:00', NULL, 5),
+('Configurar scanner',     'Instalar driver de scanner MarcaX.',            'M√©dia',  'Hardware', 'N3', 'Aberto',      '2025-02-14 11:45:00', NULL, 6),
+('Permiss√£o API',          'Dar acesso √† API interna para time dev.',       'Urgente','Conta',    'N1', 'Aberto',      '2025-03-22 10:10:00', NULL, 7),
+('Ataque de phishing',     'Usu√°rio clicou em link suspeito.',              'Urgente','Seguran√ßa','N1', 'Em Andamento','2025-04-09 12:00:00', NULL, 8),
+('D√∫vida processo',        'Como solicitar reembolso de despesas?',         'Baixa',  'Solicita√ß√µes Gerais','N3','Resolvido','2025-01-18 09:20:00', '2025-01-18 09:45:00', 9),
+('Outro issue gen√©rico',   'Descri√ß√£o gen√©rica para caso "Outro".',        'M√©dia',  'Outro',    'N2', 'Fechado',     '2025-02-07 14:35:00', '2025-02-07 15:00:00', 10);
 
-INSERT INTO tblAvaliacao (qualidade, tempoEspera, tempoAtendimento, idTicket) VALUES
+INSERT INTO tblAvaliacao (qualidade, tempoEspera, tempoAtendimento, resolvido) VALUES
 (5, 3, 4, 1),
-(4, 2, 5, 2),
-(3, 4, 3, 3),
-(2, 5, 2, 4),
-(5, 1, 5, 5);
+(4, 2, 5, 0),
+(3, 4, 3, 0),
+(2, 5, 2, 1),
+(5, 1, 5, 1);
 
 
 
